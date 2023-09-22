@@ -1,5 +1,3 @@
-4-rev_array.c
-
 #include "main.h"
 /**
  * reverse_array - reverse array of integers
@@ -8,15 +6,14 @@
  *
  * Return: void
  */
-void reverse_array(int *a, int n)
-{
-	int i;
-	int t;
-
-	for (i = 0; i < n--; i++)
-	{
-		t = a[i];
-		a[i] = a[n];
-		a[n] = t;
-	}
+void reverse_array(int *a, int n) {
+    int start = 0;
+    int end = n - 1;
+    int temp;
+    while (start < end) {
+        temp = a[start];
+        a[start] = a[end];
+        a[end] = temp; start++;
+        end--;
+    }
 }
