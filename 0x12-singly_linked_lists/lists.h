@@ -7,7 +7,8 @@
  * @len: lengtht
  * @next: ptr
  *
- * Description: singly linked list node structures
+ * Description: singly linked list node structure
+ * for Holberton project
  */
 typedef struct list_s
 {
