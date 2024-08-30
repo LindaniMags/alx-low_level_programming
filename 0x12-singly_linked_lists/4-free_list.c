@@ -2,18 +2,18 @@
 #include "lists.h"
 
 /**
- * free_list - frees memory
- * @head: memory to be freed
+ * free_list - frees a list_t list.
+ * @head: list_t list
  */
 void free_list(list_t *head)
 {
-	list_t *curr;
+	list_t *temp;
 
 	while (head)
 	{
-		curr = head->next;
+		temp = head->next;
 		free(head->str);
 		free(head);
-		head = curr;
+		head = temp;
 	}
 }
